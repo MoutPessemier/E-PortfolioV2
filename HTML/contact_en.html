@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="../CSS/reset.css" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="icon" type="image/png" href="../IMAGES/16x16 world sprite.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../IMAGES/32x32 world sprite.png" sizes="32x32" />
+    <title>Mout Pessemier</title>
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="nav-wrapper indigo darken-2">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col s9">
+                        <a href="../index.html" class="breadcrumb">Home</a>
+                        <a href="#!" class="breadcrumb">Contact</a>
+                    </div>
+                    <div class="col s2 offset-s1">
+                        <a class="brand-logo hide-on-small-only" href="#">Mout Pessemier</a>
+                        <a class="brand-logo small hide-on-med-and-up right" href="#">Mout Pessemier</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--form-->
+    <div class="container section">
+        <h2>Want to get in touch?</h2>
+        <hr>
+        <div class="row">
+            <div class="col s12">
+                <form id="mail" action="https://formspree.io/sitequestions@hotmail.com" method="POST"></form>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">person</i>
+                    <input id="name" name="name" type="text" required>
+                    <label for="name">Your name</label>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" name="email" type="email" required>
+                    <label for="email">Your email</label>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">message</i>
+                    <textarea id="message" name="message" class="materialize-textarea" aria-expanded="false" required></textarea>
+                    <label for="message">Your message</label>
+                </div>
+
+                <div class="input-field">
+                    <button type="submit" class="btn" id="subm">
+                        Send
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <input type="hidden" name="_next" value="http://users.hogent.be/~750076mp/HTML/contact_en.html" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer grey darken-3">
+        <div class="container center social">
+            <a href="https://www.facebook.com/mout.pessemier" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/moutpessemier/" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Personal instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/moutpessemierphotography/" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Photography instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/MoutPessemier?lang=nl" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/spookycommando" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Soundcloud" target="_blank"><i class="fab fa-soundcloud"></i></a>
+            <a href="https://www.youtube.com/channel/UCKenqgLDsL7uxRpyeXrISAg?view_as=subscriber" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/mout-pessemier-9954a9163/" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/MoutPessemier" class="tooltipped btn-floating btn-small transparent"
+                data-tooltip="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-copyright center">
+            <div class="container">
+                <span class="center">&copy; 2018 &ndash; Mout Pessemier</span>
+            </div>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../JS/werktniet.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+
+</html>

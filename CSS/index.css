@@ -1,0 +1,108 @@
+header {
+    background: url(../IMAGES/DSC_2157clz.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+@media screen and (min-width: 601px) {
+    header {
+        min-height: 1000px;
+    }
+}
+
+.section {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+#photography {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+#photoshop {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+.tabsection {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.truncate {
+    padding-bottom: 0.3em;
+}
+
+footer.page-footer {
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .parallax-container {
+        height: 150px;
+    }
+
+    a.brand-logo {
+        font-size: 25px;
+    }
+
+    a.brand-logo.small.hide-on-med-and-up.right {
+        font-size: 20px;
+    }
+
+    textarea.materialize-textarea {
+        min-height: 150px;
+        max-width: calc(100% - 3rem)
+    }
+}
+
+div.input-field {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+textarea.materialize-textarea {
+    min-height: 150px;
+    max-width: calc(100% - 3rem)
+}
+
+.bs {
+    padding-left: 30vw;
+}
+
+li {
+    list-style-type: none;
+}
+
+.tooltipped {
+    margin-left: .5vw;
+    margin-right: .5vw;
+}
+
+.social {
+    padding-top: 1vw;
+}
+
+.stardiv {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.mar {
+    margin-bottom: 1.2em;
+}
+
+.inv {
+    visibility: hidden;
+}
+
+.ltxt {
+    font-size: 1.2em;
+    margin-bottom: .3em;
+}
+
+.mtxt {
+    font-size: 20px !important;
+}
