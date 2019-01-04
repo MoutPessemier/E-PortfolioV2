@@ -38,38 +38,52 @@
     </nav>
 
     <!--form-->
+
     <div class="container section">
         <h2>Want to get in touch?</h2>
         <hr>
         <div class="row">
             <div class="col s12">
-                <form id="mail" action="https://formspree.io/sitequestions@hotmail.com" method="POST"></form>
+                <form id="mail" action="https://formspree.io/sitequestions@hotmail.com" method="POST">
 
-                <div class="input-field">
-                    <i class="material-icons prefix">person</i>
-                    <input id="name" name="name" type="text" required>
-                    <label for="name">Your name</label>
-                </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">person</i>
+                        <input id="name" name="name" type="text" required>
+                        <label for="name">Your name</label>
+                    </div>
 
-                <div class="input-field">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email" name="email" type="email" required>
-                    <label for="email">Your email</label>
-                </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" name="email" type="email" required>
+                        <label for="email">Your email</label>
+                    </div>
 
-                <div class="input-field">
-                    <i class="material-icons prefix">message</i>
-                    <textarea id="message" name="message" class="materialize-textarea" aria-expanded="false" required></textarea>
-                    <label for="message">Your message</label>
-                </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">list</i>
+                        <select>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="Question">Question</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Services">Services</option>
+                        </select>
+                        <label>Category</label>
+                    </div>
 
-                <div class="input-field">
-                    <button type="submit" class="btn" id="subm">
-                        Send
-                        <i class="material-icons right">send</i>
-                    </button>
-                </div>
-                <input type="hidden" name="_next" value="http://users.hogent.be/~750076mp/HTML/contact_en.html" />
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="message" name="message" class="materialize-textarea" aria-expanded="false"
+                            required></textarea>
+                        <label for="message">Your message</label>
+                    </div>
+
+                    <div class="input-field">
+                        <button type="submit" class="btn" id="subm">
+                            Send
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <input type="hidden" name="_next" value="http://users.hogent.be/~750076mp/HTML/contact_en.html" />
                 </form>
             </div>
         </div>
@@ -104,6 +118,7 @@
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="../JS/werktniet.js"></script>
+    <script src="../JS/formSelect.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
