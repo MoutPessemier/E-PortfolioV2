@@ -59,6 +59,17 @@
                 </div>
 
                 <div class="input-field">
+                    <i class="material-icons prefix">list</i>
+                    <select>
+                        <option value="" disabled selected>Kies een optie</option>
+                        <option value="Question">Vragen</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Services">Diensten</option>
+                    </select>
+                    <label>Categorie</label>
+                </div>
+
+                <div class="input-field">
                     <i class="material-icons prefix">message</i>
                     <textarea id="message" name="message" class="materialize-textarea" aria-expanded="false" required></textarea>
                     <label for="message">Jouw boodschap</label>
@@ -104,7 +115,8 @@
 
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="../JS/werktniet.js"></script>
+    <!--<script src="../JS/werktniet.js"></script>-->
+    <script src="../JS/formSelect.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
