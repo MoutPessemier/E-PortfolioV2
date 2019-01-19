@@ -6,5 +6,9 @@ If you like the site, feel free to use the code!
 
 These porfolio's follow me on my journey as a student. Every time I learn a new skill, I upgrade/remake my portfolio to integrate the newly learnt skill.
 Versions:
-V1: HTML & CSS\n
+
+
+V1: HTML & CSS
+
+
 V2: remake HTML & CSS + basic JS
