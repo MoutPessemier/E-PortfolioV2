@@ -1,14 +1,18 @@
 # E-portfolio-V2
 
-updated version of my E-portfolio repository.
-Check out my site at users.hogent.be/~750076mp
-If you like the site, feel free to use the code!
+In my first year as a CS student, I got the task to create an e-portfolio. Most of my fellow students just took a template but I wanted to make it myself and so I did. This is the second version of my portfolio. This portfolio follows me through my 3 years as a CS student.
 
-These porfolio's follow me on my journey as a student. Every time I learn a new skill, I upgrade/remake my portfolio to integrate the newly learnt skill.
-Versions:
+You can find it [here](https://users.hogent.be/~750076mp).
 
+### Technologies used
 
-V1: HTML & CSS
+- HTML(5)
+- CSS(3) + [Materializecss](https://materializecss.com/)
+- JS (ES6)
 
+### Versions
 
-V2: remake HTML & CSS + basic JS
+- [V1](https://github.com/MoutPessemier/E-PortfolioV1): HTML & CSS
+- V2: Remake HTML & CSS + added JS
+
+Copyright 2020 &copy; by Mout Pessemier
