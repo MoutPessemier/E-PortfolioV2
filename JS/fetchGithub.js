@@ -1,4 +1,5 @@
-let repos = [];
+const repos = [];
+const isEnglish = document.documentElement.lang == 'en';
 class Repo {
   constructor(name, description, webUrl, apiUrl) {
     this._name = name;
@@ -6,8 +7,6 @@ class Repo {
     this._webUrl = webUrl;
     this._apiUrl = apiUrl;
     this._languages = [];
-    this._commits = '';
-    this.fetchCommits();
     this.fetchLanguages();
   }
 
@@ -27,14 +26,6 @@ class Repo {
     return this._languages;
   }
 
-  get commits() {
-    return this._commits;
-  }
-
-  set commits(value) {
-    this._commits = value;
-  }
-
   set languages(value) {
     this._languages = value;
   }
@@ -45,19 +36,8 @@ class Repo {
       url: url,
       complete: data => {
         this._languages = Object.keys(data.responseJSON);
-      }
+      },
     });
-  }
-
-  async fetchCommits() {
-    const url = this._apiUrl + '/commits';
-    await $.ajax({
-      url: url,
-      complete: data => {
-        this.commits = data.responseJSON.length >= 30 ? '+30' : `${data.responseJSON.length}`;
-      }
-    });
-    updateTable();
   }
 }
 
@@ -68,65 +48,64 @@ $(document).ready(async () => {
       repos = xhr.responseJSON.map(json => {
         return new Repo(json.name, json.description, json.html_url, json.url);
       });
-      // build up table based on data
-      const tbody = $('#projectsData')[0];
+      // build up list based on data
+      const container = document.getElementById('projectListContainer');
       repos.forEach(repo => {
-        const tr = document.createElement('tr');
+        const li = document.createElement('li');
 
-        // name
-        const tdName = document.createElement('td');
-        tdName.style.fontSize = '12px';
-        const tdNameText = document.createTextNode(repo.name);
-        tdName.appendChild(tdNameText);
-        tr.appendChild(tdName);
+        //header
+        const collapsibleHeader = document.createElement('div');
+        collapsibleHeader.classList.add('collapsible-header');
+        const headerText = document.createTextNode(repo.name);
+        collapsibleHeader.appendChild(headerText);
+        li.appendChild(collapsibleHeader);
 
-        // description
-        const tdDescription = document.createElement('td');
-        tdDescription.style.fontSize = '10px';
-        const tdDescriptionText = document.createTextNode(repo.description);
-        tdDescription.appendChild(tdDescriptionText);
-        tr.appendChild(tdDescription);
+        //body
+        const collapsibleBody = document.createElement('div');
+        collapsibleBody.classList.add('collapsible-body');
 
-        // languages
-        const tdLanguages = document.createElement('td');
-        tdLanguages.style.fontSize = '10px';
-        tdLanguages.style.textAlign = 'center';
-        tdLanguages.classList.add(repo.name + 'Lang');
-        const tdLanguagesText = document.createTextNode(repo.languages);
-        tdLanguages.appendChild(tdLanguagesText);
-        tr.appendChild(tdLanguages);
+        const description = document.createElement('p');
+        const descText = document.createTextNode(repo.description);
+        description.appendChild(descText);
+        collapsibleBody.appendChild(description);
 
-        // commits
-        const tdCommits = document.createElement('td');
-        tdCommits.style.fontSize = '10px';
-        tdCommits.style.textAlign = 'center';
-        tdCommits.classList.add(repo.name + 'Commits');
-        const tdCommitsText = document.createTextNode(repo.commits);
-        tdCommits.appendChild(tdCommitsText);
-        tr.appendChild(tdCommits);
+        const languages = document.createElement('p');
+        languages.style.marginTop = '1rem';
+        const langTxt = isEnglish ? 'Languages used: ' : 'Talen gebruikt: ';
+        const langText = document.createTextNode(langTxt + repo.languages);
+        languages.appendChild(langText);
+        collapsibleBody.appendChild(languages);
 
-        // url
-        const tdUrl = document.createElement('td');
-        const a = document.createElement('a');
-        a.href = repo.url;
-        a.target = '_blank';
-        a.style.fontSize = '10px';
-        const aUrlText = document.createTextNode(repo.url);
-        tdUrl.appendChild(a);
-        a.appendChild(aUrlText);
-        tr.appendChild(tdUrl);
+        const url = document.createElement('a');
+        url.href = repo.url;
+        url.target = '_blank';
+        url.style.marginTop = '1rem';
+        url.style.display = 'block';
+        const urlText = document.createTextNode(repo.url);
+        url.appendChild(urlText);
+        collapsibleBody.appendChild(url);
 
-        tbody.appendChild(tr);
+        li.appendChild(collapsibleBody);
+        container.appendChild(li);
       });
-    }
+    },
+    error: () => {
+      const container = document.getElementById('projectListContainer');
+      const div = document.createElement('div');
+      div.classList.add('center');
+      const txt = isEnglish
+        ? 'Something went wrong or the request limit is reached, check back later!'
+        : 'Er is iets fout gegeaan of het maximum aantal requests is bereikt, kom later terug!';
+      const text = document.createTextNode(txt);
+      div.appendChild(text);
+      container.appendChild(div);
+    },
   });
+  updateTable();
 });
 
 const updateTable = () => {
   repos.forEach(repo => {
-    const tdCommits = document.getElementsByClassName(`${repo.name}Commits`)[0];
-    tdCommits.innerHTML = repo.commits;
-
     const tdLanguages = document.getElementsByClassName(`${repo.name}Lang`)[0];
     tdLanguages.innerHTML = repo.languages.join(', ');
   });

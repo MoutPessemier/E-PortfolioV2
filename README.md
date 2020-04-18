@@ -1,6 +1,6 @@
 # E-portfolio-V2
 
-In my first year as a CS student, I got the task to create an e-portfolio. Most of my fellow students just took a template but I wanted to make it myself and so I did. This is the second version of my portfolio. This portfolio follows me through my 3 years as a CS student.
+In my first year as a CS student, I got the task to create an e-portfolio. Most of my fellow students just took a template but I wanted to make it myself to show off my development throughout the years and so I did. This is the second version of my portfolio with some JavaScript sprinkled in there. During my 3 years, I've been steadily updating the layout, the files and the content of my portfolio.
 
 You can find it [here](https://users.hogent.be/~750076mp).
 
