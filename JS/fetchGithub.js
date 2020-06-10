@@ -50,7 +50,8 @@ $(document).ready(async () => {
       });
       // build up list based on data
       const container = document.getElementById('projectListContainer');
-      repos.forEach(repo => {
+      repos.forEach(async repo => {
+        await repo.fetchLanguages();
         const li = document.createElement('li');
 
         //header
