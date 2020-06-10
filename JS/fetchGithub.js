@@ -81,6 +81,7 @@ $(document).ready(async () => {
         url.target = '_blank';
         url.style.marginTop = '1rem';
         url.style.display = 'block';
+        url.style.fontSize = '12px';
         const urlText = document.createTextNode(repo.url);
         url.appendChild(urlText);
         collapsibleBody.appendChild(url);
