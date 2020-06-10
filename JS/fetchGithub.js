@@ -1,5 +1,5 @@
 let repos = [];
-const isEnglish = document.documentElement.lang == 'en';
+const isEnglish = document.documentElement.lang === 'en';
 class Repo {
   constructor(name, description, webUrl, apiUrl) {
     this._name = name;
