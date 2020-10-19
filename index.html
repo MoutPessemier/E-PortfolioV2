@@ -156,9 +156,7 @@
                 </div>
                 <div class="col s12 l5 offset-l1">
                   <h4 class="indigo-text text-darken-4">Nature</h4>
-                  <p>
-                    I just love venturing into the wild and shooting the raw mountains, the forests and the skies.
-                  </p>
+                  <p>I just love venturing into the wild and shooting the raw mountains, the forests and the skies.</p>
                 </div>
               </div>
             </div>
@@ -189,9 +187,7 @@
           </div>
 
           <div class="col s12" id="photoshop">
-            <p>
-              Since I shoot pictures, I figuerd it would be great if I could enhance and correct them as well.
-            </p>
+            <p>Since I shoot pictures, I figuerd it would be great if I could enhance and correct them as well.</p>
             <div class="col s12 l6">
               <h4 class="indigo-text text-darken-4">Before</h4>
               <img src="IMAGES/DSC_2706l.jpg" alt="" class="responsive-img materialboxed" />
@@ -299,7 +295,7 @@
       <a href="FILES/Curriculum Vitae (eng).zip" download="Curriculum Vitea" class="left">
         <i class="material-icons black-text">insert_drive_file</i>
       </a>
-      <p style="padding-top: 5px; padding-left: 30px;">
+      <p style="padding-top: 5px; padding-left: 30px">
         Download my curriculum and other certificates.
         <small>(click the icon)</small>
       </p>
@@ -375,9 +371,13 @@
 
     <!--Scripts-->
     <script>
+      function _calculateAge(birthday) {
+        const ageDifMs = Date.now() - birthday.getTime();
+        const ageDate = new Date(ageDifMs); // miliseconds from epoch
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+      }
       document.querySelector('#year').textContent = new Date().getFullYear();
-      document.querySelector('#age').textContent =
-        new Date().getFullYear() - 2000 + (new Date().getMonth() >= 5 && new Date().getDay() >= 13 ? 1 : 0);
+      document.querySelector('#age').textContent = _calculateAge(new Date(1999, 06, 14));
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="JS/nav.js"></script>
