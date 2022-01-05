@@ -14,5 +14,3 @@ You can find it [here](http://moutpessemier.be).
 
 - [V1](https://github.com/MoutPessemier/E-PortfolioV1): HTML & CSS
 - V2: Remake HTML & CSS + added JS
-
-Copyright 2020 &copy; by Mout Pessemier
