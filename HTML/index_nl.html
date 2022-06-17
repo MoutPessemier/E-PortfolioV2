@@ -374,15 +374,7 @@
     </footer>
 
     <!--Scripts-->
-    <script>
-      function _calculateAge(birthday) {
-        const ageDifMs = Date.now() - birthday.getTime();
-        const ageDate = new Date(ageDifMs); // miliseconds from epoch
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
-      }
-      document.querySelector('#year').textContent = new Date().getFullYear();
-      document.querySelector('#age').textContent = _calculateAge(new Date(1999, 06, 14));
-    </script>
+    <script src="../JS/calcAge.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="../JS/nav.js"></script>
     <script src="../JS/parallax.js"></script>
